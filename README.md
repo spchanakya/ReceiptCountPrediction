@@ -5,20 +5,18 @@ This project aims to predict the number of receipts that will be scanned within 
 
 ## Files Description
 
-### `modelpy.ipynb`
-This Jupyter notebook is the core of the project, divided into three parts:
-1. **Data Handling**: Importing data into a DataFrame and extracting the day, week number, and month number. Decomposing the data to analyze Trend, Seasonality, and Residue.
-2. **Model Development**: Implementing a linear regression model to fit the weekly trend. The model is trained on 80% of 2021 data and tested on the remaining 20%. It predicts based on the week number of the year.
+### `modelpy.py`
+This Jupyter notebook is the core of the project and is divided into three parts:
+1. **Data Handling**: Importing data into a DataFrame and extracting the day, week, and month numbers. Decomposing the data to analyze Trend, Seasonality, and Residue.
+2. **Model Development**: Implementing a simple Linear Regression model but finding the coefficients(intercept, slope) by finding the closed form solution. Using a dot product with the coefficients, we can predict the values.
 3. **Sample Testing**: Inputs are the week number in 2022 (ranging from 52+00 to 52+52). The model outputs the average weekly prediction, adjusted for seasonal effects and an offset for standard deviation.
 
 ### `app.py`
 This Flask application integrates the model with HTML inputs, computes prediction statistics, and generates graphical visualizations.
 
-### `trend.pkl`
-The saved model from the second part of `modelpy.ipynb`.
 
 ### `myhtmlpage.html`, `styles.css`
-Contains the HTML structure and styling for the Flask application.
+It contains the HTML structure and styling for the Flask application.
 
 ## Setup Instructions
 1. Download the repository into a single folder.
