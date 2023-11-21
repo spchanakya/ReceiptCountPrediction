@@ -14,7 +14,7 @@ This Jupyter notebook is the core of the project, divided into three parts:
 ### `app.py`
 This Flask application integrates the model with HTML inputs, computes prediction statistics, and generates graphical visualizations.
 
-### `model.pkl`
+### `trend.pkl`
 The saved model from the second part of `modelpy.ipynb`.
 
 ### `myhtmlpage.html`, `styles.css`
@@ -32,3 +32,4 @@ Contains the HTML structure and styling for the Flask application.
 ## Points to Remember
 - Input dates in YYYY-MM-DD format only.
 - Use either the pre-defined month or custom date inputs, not both.
+- Docker is not initialized yet,i am facing some errors in imaging my file,avoid the docker files
