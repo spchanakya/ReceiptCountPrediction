@@ -1,0 +1,56 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.9;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px; 
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.login {
+    width: 400px; 
+    margin: 100px auto; 
+    padding: 20px;
+    background: white;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+select, input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box; 
+}
+
+button[type="submit"]:hover {
+    background-color: #0029cb;
+}

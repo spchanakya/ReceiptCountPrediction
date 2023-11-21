@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Receipt Count Predictor</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+ <div class="login">
+	<h1>Receipt Count Predictor for 2022</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+      <div class="form-group">
+        <label for="Month ">Month to Predict:</label> 
+        <select name="month" id="month"> 
+        <option value="Custom Dates">Custom Dates</option> 
+        <option value="January">January</option> 
+        <option value="February">February</option> 
+        <option value="March">March</option> 
+        <option value="April">April</option> 
+        <option value="May">May</option> 
+        <option value="June">June</option> 
+        <option value="July">July</option> 
+        <option value="August">August</option> 
+        <option value="September">September</option> 
+        <option value="October">October</option> 
+        <option value="November">November</option> 
+        <option value="December">December</option> 
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="text" name="Start_Date" placeholder="Start Date" />
+        <input type="text" name="End_Date" placeholder="End Date" />
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form></div>
+   <img src="data:image/png;base64,{{ plot_url }}">
+   <img src="data:image/png;base64,{{ plot_url2 }}">
+   <h2>Data Error Check: {{ errors }}</h2>
+
+
+ </div>
+
+
+</body>
+</html>
