@@ -10,6 +10,11 @@ import matplotlib.pyplot as plt
 import io
 import base64
 from pandas.plotting import table
+from modelpy import predict_trend , beta
+import warnings
+warnings.filterwarnings('ignore')
+
+
 
 # day_shift and week_shift are same as in modelpy.ipynb
 day_shift_d = {
@@ -34,7 +39,7 @@ def get_month_start_end(month_name, year=2022):
 
 def get_trend_values(day,week,month):
   # for detailed explanation and working of this code please refer to the same function in modelpy.ipynb
-  pred_trend=model.predict(np.reshape(int(week)+2+52,(-1,1)));
+  pred_trend=predict_trend(np.array([int(week)+2+52]),beta)
   day_sea = day_shift.loc[day_shift['Day'].values ==day]['weightage'].values;
   week_sea = week_shift.loc[week_shift['Week'].values == str('0'+str(int(week)%4))]['seasonal'].values;
   min_final = pred_trend+min(day_sea,week_sea) +100000
